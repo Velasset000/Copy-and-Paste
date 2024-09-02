@@ -1,0 +1,26 @@
+.new-temp-container{
+  width: 20vw;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(140, 216, 246);
+  margin: 10px;
+}
+header{
+  background-color: rgb(244, 211, 81);
+  padding: 20px;
+}
+.line{
+  background-color: black;
+  height: 1px;
+}
+.new-copy{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.new-temp-input{
+  background-color: rgb(180, 222, 238);
+  border: none;
+}
