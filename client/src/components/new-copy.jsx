@@ -18,11 +18,23 @@ export default function NewCopy({templates, setTemplates}){
 
     const  addNewTemp = () =>{
         console.log(title);
-        console.log(temp)
+        console.log(temp);
         setTemplates([
             ...templates,
             {title: title, template: temp, key: templates.length + 1}
-        ])
+        ]);
+        fetch("api/createTemplate", {
+            body: JSON.stringify({title: title, template: temp, key: templates.length + 1}),
+            method: "post",
+            headers: {
+              "Content-Type": "application/json",
+            },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+                console.log(data)
+            })
+          .catch((error) => console.error("Something went wrong"));
     }
 
 
